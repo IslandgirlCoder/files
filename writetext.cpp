@@ -10,15 +10,15 @@ int main( )
    float b = 68.123; 
    char c = 'J';
 
-	ifstream myfile{"abc.txt"};//try to open data.txt for reading (input)
+	ofstream myfile{"abc.txt"};//try to open data.txt for reading (input)
 
   	if (myfile)// check if file opened succesfully
     	{
-         	myfile >> a >> b >> c;//read data from text file
-         	cout<<" the data "<<a<<" and "<<b<< c << " were read from the file"<<endl;
+         	myfile << a << endl << b << endl << c << endl;//read data from text file
+         	cout<<" the data "<< a <<" "<<b <<" "<< c << " were read from the file"<<endl;
     	}
   	else
-     	cout<<"Error opening data.txt"<<endl;//print error before program quits
+     	cout<<"Error opening abc.txt"<<endl;//print error before program quits
 
  
    return 0;
